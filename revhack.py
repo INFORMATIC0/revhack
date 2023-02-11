@@ -7,6 +7,7 @@ def download(url, filename):
     filec = open(filename, 'wb')
     filec.write(file.content)
     filec.close()
+    print('DESCARGADO')
     return filename
 def uploadFile(filename, proxy=""):
     infoRGCDL = requests.session()
@@ -36,6 +37,7 @@ def uploadFile(filename, proxy=""):
     	regex4 = regex3.split("-")[1]
     	url = str("https://rcta.unah.edu.cu/index.php/RGCDL/author/downloadFile/1650/"+regex4)
     	print(url)
-url = input("URL: ")
-name = input("NAME: ")
+url = "https://erasmojuand.onrender.com/fse/group-0-2023-02-11-15-50-05/3761_3.mp4"
+name = "Shinka no mi 02.mp4"
+print('DESCARGANDO')
 uploadFile(download(url, name))
